@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt("Qual é seu nome?");
+        document.write(`Seu nome tem ${nome.length} letras. <br>`);
+        /*.length = Contagem de letras*/
+        document.write(`Seu nome maiúsculo é ${nome.toUpperCase()} <br>`);
+        /*.toUpperCase() = maiúsculo*/
+        document.write(`Seu nome minúsculo é ${nome.toLowerCase()} <br>`);
+        /*.toLowerCase() = minúsculo*/
+        var n1 = 1545.5;
+        document.write(`Seu número é: ${n1.toFixed(2).replace(".",",")} <br>`);
+        /*
+        .toFixed(2) = Casas decimais
+        .replace(".",",") = troca . por ,
+        */
+        document.write(`Seu número é: ${n1.toLocaleString("pt-br", {style: "currency", currency: "BRL"})} <br>`);
+        /*pt-br = localizar para o brasil
+        currency = estilo será dinheiro
+        currency: "BRL" = será brasil real*/
+    </script>
+</body>
+</html>
