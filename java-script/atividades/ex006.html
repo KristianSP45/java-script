@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM(Document Objetc Model)</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: slateblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Usando <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
+    <script>
+        /*
+        Árvore DOM(exemplo):
+                window ⭣
+
+        location / document ⭣ / history
+
+                html ⭣
+
+        ⭣ head ⭣   /   ⭣ body ⭣
+
+        meta/title |  h1 / p / p ⭣ / div
+
+                            strong
+
+        obs:html é filho de document,mas também é pai de head e body (só tem filho e pai)
+        */
+        var p1 = window.document.getElementsByTagName("p")[0];
+        window.document.write(p1.innerText);
+        /*
+        Selecionando por:
+        Marca = getElementsByTagName()
+
+        ID = getElementById()
+
+        Nome = getElementsByName()
+
+        Classe = getElementsByClassName()
+
+        Seletor = querySelector()/querySelectorAll()
+        */
+    </script>
+</body>
+</html>
